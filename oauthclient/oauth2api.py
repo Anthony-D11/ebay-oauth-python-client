@@ -22,7 +22,7 @@ import requests
 import logging
 import oauthclient.model.util
 from datetime import datetime, timedelta
-from credentialutil import credentialutil
+from oauthclient.credentialutil import credentialutil
 from oauthclient.model.model import oAuth_token
 
 LOGFILE = 'eBay_Oauth_log.txt'
