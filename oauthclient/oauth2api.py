@@ -23,7 +23,7 @@ import logging
 import model.util
 from datetime import datetime, timedelta
 from credentialutil import credentialutil
-from model.model import oAuth_token
+from oauthclient.model.model import oAuth_token
 
 LOGFILE = 'eBay_Oauth_log.txt'
 logging.basicConfig(level=logging.DEBUG, filename=LOGFILE, format="%(asctime)s: %(levelname)s - %(funcName)s: %(message)s", filemode='w')
