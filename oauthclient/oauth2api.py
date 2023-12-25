@@ -65,8 +65,8 @@ class oauth2api(object):
       
         logging.info("Trying to get a new application access token ... ")        
         credential = credentialutil.get_credentials(env_type)       
-        headers = model.util._generate_request_headers(credential) 
-        body = model.util._generate_application_request_body(credential, ' '.join(scopes))    
+        headers = oauthclient.model.util._generate_request_headers(credential)
+        body = oauthclient.model.util._generate_application_request_body(credential, ' '.join(scopes))
         
         resp = requests.post(env_type.api_endpoint, data=body, headers=headers)
         content = json.loads(resp.content)
@@ -88,8 +88,8 @@ class oauth2api(object):
         logging.info("Trying to get a new user access token ... ")  
         credential = credentialutil.get_credentials(env_type)   
     
-        headers = model.util._generate_request_headers(credential)
-        body = model.util._generate_oauth_request_body(credential, code)
+        headers = oauthclient.model.util._generate_request_headers(credential)
+        body = oauthclient.model.util._generate_oauth_request_body(credential, code)
         resp = requests.post(env_type.api_endpoint, data=body, headers=headers)
             
         content = json.loads(resp.content)
@@ -116,8 +116,8 @@ class oauth2api(object):
 
         credential = credentialutil.get_credentials(env_type)   
     
-        headers = model.util._generate_request_headers(credential)
-        body = model.util._generate_refresh_request_body(' '.join(scopes), refresh_token)
+        headers = oauthclient.model.util._generate_request_headers(credential)
+        body = oauthclient.model.util._generate_refresh_request_body(' '.join(scopes), refresh_token)
         resp = requests.post(env_type.api_endpoint, data=body, headers=headers)
         content = json.loads(resp.content)
         token = oAuth_token()        
