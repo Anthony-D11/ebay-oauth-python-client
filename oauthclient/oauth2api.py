@@ -20,7 +20,7 @@ import json
 import urllib
 import requests
 import logging
-import model.util
+import oauthclient.model.util
 from datetime import datetime, timedelta
 from credentialutil import credentialutil
 from oauthclient.model.model import oAuth_token
