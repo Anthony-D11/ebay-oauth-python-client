@@ -18,7 +18,7 @@ from setuptools import setup, find_packages
 import re
 import os
 
-PKG = 'ebay-oauth-python-client'
+PKG = 'oauthclient'
 
 version = __import__(PKG).get_version()
 
