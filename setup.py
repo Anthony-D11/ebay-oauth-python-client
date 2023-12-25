@@ -20,7 +20,7 @@ import os
 
 PKG = 'oauthclient'
 
-version = ('0.0.1')
+version = '0.0.1'
 
 long_desc = """eBay OAuth client library is a simple 
 and easy-to-use library for integrating with eBay 
